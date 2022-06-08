@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>会员注册表单</title>
+</head>
+
+<body>
+	<form action="#" method="post">
+	<h2>会员注册</h2>
+	<p>
+		<span>性质：</span>
+		<input type="radio" name="Nature" checked="checked">&nbsp;&nbsp;个人
+		<input type="radio" name="Nature">&nbsp;&nbsp;公司
+	</p>
+	<p>
+		<span>昵称：</span>
+		<input type="text" placeholder="小明" maxlength="6">
+	</p>	
+	<p>
+		<span>密码：</span>
+		<input type="password" size="40">
+	</p>
+	<p>
+		<span>电子邮件：</span>
+		<input type="email" name="myemail" placeholder="123467@gmail.com" required multiple>
+	</p>
+	<P>
+		<span>所在地：</span>
+		<select>
+			<option>-请选择-</option>
+			<option>北京</option>
+			<option>上海</option>
+			<option selected="selected">广州</option>
+			<option>武汉</option>
+			<option>成都</option>
+		</select>
+	</P>
+	<p>
+		<span>身份证号：</span>
+		<input type="text" name="card" required pattern="^\d {8,18}|[0-9x] {8.18}|[0-9x] {8.18}?$" title="必须填写，能够。。">
+	</p>
+	<p>
+		<span>手机号码：</span>
+		<input type="tel" name="telephone" pattern="^\d{11}$required">
+	</p>
+	<p class="advice">
+		<span>意见反馈：</span>
+		<textarea cols="50" rows="50" class="message">如果。。</textarea>
+		</p>
+		<p class="mgn">
+			<span></span>
+			<input type="submit" value="提交" class="btn">
+			<input type="reset" value="重置" class="btn">
+		</p>
+	</form>
+</body>
+</html>
