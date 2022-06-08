@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>函数参数</title>
+</head>
+
+<body>
+</body>
+</html>
+<script type="text/javascript">
+function tax(pay){
+var ratal=pay-5000;
+var rate=0;
+var deAmount=0;
+if(ratal>0 && ratal<=3000){
+rate=0.03;
+deAmount=0;
+}
+else if(ratal>3000 && ratal<=12000){
+rate=0.1;
+deAmount=210;
+}
+else if(ratal>12000 && ratal<=25000){
+rate=0.2;
+deAmount=1410;
+}
+else if(ratal>25000 && ratal<=35000){
+rate=0.25;
+deAmount=2660;
+}
+else if(ratal>35000 && ratal<=55000){
+rate=0.3;
+deAmount=4410;
+}
+else if(ratal>55000 && ratal<=80000){
+rate=0.35;
+deAmount=7160;
+}
+else if(ratal>80000 ){
+rate=0.45;
+deAmount=15160;
+}
+	var taxAmount=ratal*rate-deAmount;
+	document.write("工资"+pay+"应扣税:"+taxAmount+"<br/>");
+}
+	tax(5000);
+	tax(10000);
+	tax(20000);
+</script>

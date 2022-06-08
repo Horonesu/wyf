@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户注册</title>
+</head>
+<body>
+<h1>用户注册</h1>
+<form id="regForm"action=""method="post">
+	<label>用户名：</label>
+	<input id="userName"type="text"placeholder="请输入用户名"
+		   onFocus="eventRes()"onBlur="eventRes()"/><br/>
+	<p id="userTips"></p>
+	<label>密码：</label>
+	<input id="pwd" type="password" placeholder="请输入密码"/><br/>
+	<p id="pwdTips"></p>
+	<label>邮箱：</label>
+	<input id="email"type="text" placeholder="请输入邮箱地址"/><br/>
+	<p id="emailTips"></p>
+	<input type="submit" value="立即注册"/>
+	</form>
+</body>
+</html>
+<script type="text/javascript">
+function getEl(id){
+	return document.getElementById(id);
+	
+}
+function checkName(){
+	var patt=/^[a-zA-Z]\w{5,17}$/;
+	var userStr=getEl("userName").value;
+	return patt.test(userStr);
+}
+function eventEes(){
+	var userStr=getEl("userName").value;
+	if(userStr==""||userStr==null){
+		getEl("userTips").innerHTML="<span style='color:#aaa'> 
+		6-18个字符，可以是英文、数字和下划线，以英文字母开头</span>";
+	}
+	else{
+		if(! checkName()){
+			getEl("userTips").innerHTML="<span style='color:#f00'>
+			请重新输入</span>";
+		}
+		else{
+			getEl("userTips").innerHTML="";
+		}
+	}
+}
+</script>

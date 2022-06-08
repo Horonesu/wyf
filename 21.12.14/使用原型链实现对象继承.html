@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+	function Shape(){}
+		Shape.prototype.color="red";
+		function Circle(r){
+			
+			this.r=r;
+			this.showInfo=function(){
+				document.write("Circle的半径为:"+this.r+"; Circle的颜色为："+this.color+"<br/>");
+													};
+							   }
+		Circle.prototype=new Shape();
+				function Rect(w,h){
+					this.w=w;
+					this.h=h;
+					this.showInfo=function(){
+						document.write("Rect的宽为:"+this.w+";Rect的高为:"+this.h+";Rect的颜色为:"+this.color+"<br/>");
+				};
+				}
+			
+	Rect.prototype=new Shape();
+				var circle=new Circle(5);
+				circle.showInfo();
+				var rect=new Rect(20,30);
+				rect.showInfo();
+	
+	</script>
+</body>
+</html>

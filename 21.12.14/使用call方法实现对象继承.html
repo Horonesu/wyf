@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<script type="text/javascript">
+	var Car=new Object();
+		Car.name="小轿车";
+		Car.color="red";
+		Car.seats=5;
+		Car.showMsg=function(){
+			document.write("父对象Car的信息如下:<br/>");
+			document.write("名称:"+this.name+";颜色:"+this.color+";座位数:"+this.seats+"<br/>");
+		}
+		function MyCar(){
+			document.write("子对象的信息如下:<br/>");
+			document.write("名称:"+this.name+";颜色:"+this.color+";座位数:"+this.seats+"<br/>");
+		}
+		MyCar.call();
+		MyCar.call(Car);
+	</script>
+	
+</head>
+
+<body>
+</body>
+</html>
